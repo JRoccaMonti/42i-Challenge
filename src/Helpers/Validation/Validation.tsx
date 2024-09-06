@@ -1,19 +1,21 @@
 export const validateArrayNumbers = (
     numbers: string, 
-    validateDuplicates: boolean = false
+    validateDuplicates: boolean = false,
+    AllowNegatives: boolean = true,
   ): string[] => {
     const errors: string[] = [];
     
     if (numbers.startsWith(',') || numbers.endsWith(',')) {
       errors.push('La lista de números no debe comenzar ni terminar con una coma.');
     }
-  
-    if (/,,/.test(numbers)) {
-      errors.push('La lista de números no debe contener comas consecutivas.');
-    }
-  
-    if (/[^0-9-],|,[^0-9-]/.test(numbers)) {
-      errors.push('Las comas deben estar separadas por números enteros.');
+    if (AllowNegatives) {
+      if (/[^0-9-],|,[^0-9-]/.test(numbers)) {
+        errors.push('Las comas deben estar separadas por números enteros.');
+      }
+    }else{
+      if (/[^0-9],|,[^0-9]/.test(numbers)) {
+        errors.push('Las comas deben estar separadas por números enteros positivos.');
+      }
     }
   
     const numArray = numbers.split(',')

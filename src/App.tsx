@@ -1,11 +1,12 @@
 import styles from "./App.module.css";
-import { NavBar,TowNumbers } from "./Components/index";
+import { NavBar,TowNumbers,ConstructibleChange } from "./Components/index";
 function App() {
 
   return (
     <div className={styles.root}>
       <NavBar/>
       <TowNumbers/>
+      <ConstructibleChange/>
     </div>
   )
 }
