@@ -1,0 +1,13 @@
+.root{
+    background-color: rgba(110, 13, 13, 0.464);
+    width: 100vw;
+    position: fixed;
+    opacity: 0.95;
+    top: 0;
+    left: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    box-sizing: border-box
+}
