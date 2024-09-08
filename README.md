@@ -2,24 +2,32 @@
 
 # Setup
 
-Luego de clonar el repositorio ejecutar
+Luego de clonar el repositorio, ejecuta el siguiente comando:
 ```
 npm run demo
 ```
+Este comando hará lo siguiente:
+
+1. Instalará las dependencias.
+1. Ejecutará los tests.
+1. Iniciará el servidor de desarrollo con Vite.
+1. Abrirá automáticamente la aplicación en tu navegador predeterminado para una vista previa en vivo.
 
 # Page Functionality
 
 ## Funcion Two Number Sum:
-1. En la primera entrada, debe agregar su propio array de enteros separados por una coma sin los corchetes, tengase en cuenta que no se haceptan numeros duplicados. Por ejemplo: "11,7,8,-25"
-1. En la segunda entrada debes agregar la suma objetivo, solo se haceptan numeros enteros.
+1. En el primer campo, ingresa un array de enteros separados por comas, sin corchetes. Ten en cuenta que no se aceptan números duplicados. Por ejemplo: "11,7,8,-25".
+1. En el segundo campo, ingresa el número objetivo; solo se aceptan números enteros.
 1. Presione el botón y se mostrará el resultado.
 
 ## Funcion Non Constructible Change:
-1. En la primera entrada, debe agregar su propio array de enteros separados por una coma sin los corchetes, tengase en cuenta que no se haceptan numeros negativos. Por ejemplo: "1,4,5,6,10"
+1. En el primer campo, ingresa un array de enteros separados por comas, sin corchetes. Ten en cuenta que no se aceptan números negativos. Por ejemplo: "1,4,5,6,10".
 1. Presione el botón y se mostrará el resultado.
 
 # Testing:
-Se ejecuta automaticamente al realizar el Demo, se cuenta con acceso directo a la covertura total desde el navbar de la pagina.
+
+1. Los tests se ejecutan automáticamente cuando ejecutas el script npm run demo. Además, puedes acceder a la cobertura total desde el navbar de la página en ejecución.
+ 1. Para ejecutar los tests manualmente, utiliza:
 ```
 npm run test
 ```
