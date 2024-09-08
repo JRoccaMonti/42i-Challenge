@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NonConstructibleChange from '../../Helpers/NonConstructibleChange';
 import { validateArrayNumbers, validateNumArray } from '../../Helpers/Validation/Validation';
 
-const ConstructibleChange: React.FC = () => {
+export const ConstructibleChange: React.FC  = () => {
   const [numbers, setNumbers] = useState<string>('');
   const [result, setResult] = useState<number>();
   const [errors, setErrors] = useState<string[]>([]);

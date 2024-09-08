@@ -37,8 +37,7 @@ export const validateArrayNumbers = (
     }
   
     return errors;
-};
-  
+};  
   
 export const validateTarget = (target: number | ''): string[] => {
     const errors: string[] = [];
@@ -51,9 +50,8 @@ export const validateTarget = (target: number | ''): string[] => {
 export const validateNumArray = (numArray: number[]): string[] => {
     const errors: string[] = [];
     if (numArray.length === 0) {
-        errors.push('Por favor, ingresa al menos un número entero separado por comas.');
+        errors.push('Por favor, ingresa al menos un número entero.');
     }
     return errors;
 };
-
   

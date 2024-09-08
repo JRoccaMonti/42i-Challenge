@@ -14,6 +14,7 @@ const config = {
     '!node_modules/**',
     '!src/App.tsx',
     '!src/main.tsx',
+    '!src/Components/index.tsx',
   ],
   coverageReporters: ['json-summary', 'text', 'lcov', 'json', 'json-summary'],
   coverageThreshold: {

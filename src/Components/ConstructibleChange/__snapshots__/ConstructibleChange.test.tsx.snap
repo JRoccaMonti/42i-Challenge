@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConstructibleChange Component Debería coincidir con la snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <label>
+        Números (separados por comas):
+        <input
+          placeholder="Ej: 1, 2, 3, 4"
+          type="text"
+          value=""
+        />
+      </label>
+    </div>
+    <button>
+      Calcular
+    </button>
+    <div>
+      <p>
+        Cambio minimo : 
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
