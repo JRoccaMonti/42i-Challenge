@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# 42i Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Setup
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Luego de clonar el repositorio ejecutar
+```
+npm run demo
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# Page Functionality
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Funcion Two Number Sum:
+1. En la primera entrada, debe agregar su propio array de enteros separados por una coma sin los corchetes, tengase en cuenta que no se haceptan numeros duplicados. Por ejemplo: "11,7,8,-25"
+1. En la segunda entrada debes agregar la suma objetivo, solo se haceptan numeros enteros.
+1. Presione el botón y se mostrará el resultado.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Funcion Non Constructible Change:
+1. En la primera entrada, debe agregar su propio array de enteros separados por una coma sin los corchetes, tengase en cuenta que no se haceptan numeros negativos. Por ejemplo: "1,4,5,6,10"
+1. Presione el botón y se mostrará el resultado.
+
+# Testing:
+Se ejecuta automaticamente al realizar el Demo, se cuenta con acceso directo a la covertura total desde el navbar de la pagina.
 ```
+npm run test
+```
+# Desafios solicitados:
+- [Two Number Sum](https://42i.notion.site/Two-Number-Sum-83fced39cc3b4bb698c365fffa7b9444)
+- [Non Constructible Change](https://42i.notion.site/Non-Constructible-Change-e423c9af05c64621a40bf9dcefee3930)
+
+# Preview
+![image](https://github.com/JRoccaMonti/42i-challenge/assets/)
