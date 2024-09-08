@@ -9,7 +9,7 @@ npm run demo
 Este comando hará lo siguiente:
 
 1. Instalará las dependencias.
-1. Ejecutará los tests.
+1. Ejecutará los tests y su covertura.
 1. Iniciará el servidor de desarrollo con Vite.
 1. Abrirá automáticamente la aplicación en tu navegador predeterminado para una vista previa en vivo.
 
