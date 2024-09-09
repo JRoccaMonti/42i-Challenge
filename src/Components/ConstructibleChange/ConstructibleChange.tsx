@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import style from './ConstructibleChange.module.css';
 import {nonConstructibleChange} from '../../Helpers/nonConstructibleChange';
 import { validateArrayNumbers, validateNumArray } from '../../Helpers/Validation/Validation';
 
@@ -25,11 +26,13 @@ export const ConstructibleChange: React.FC  = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className={style.nonConstructibleChangeContainer}>
+      <h3>Funcion Cambio No Constructible </h3>
+      <div className={style.inputNumbersContainer}>
         <label>
-          Números (separados por comas):
+          Ingrese el array de numeros (separados por comas):
           <input
+            className={style.inputNumbers}
             type="text"
             value={numbers}
             onChange={(e) => setNumbers(e.target.value)}
@@ -37,17 +40,17 @@ export const ConstructibleChange: React.FC  = () => {
           />
         </label>
       </div>
-      <button onClick={handleCalculate}>Calcular</button>
+      <div className={style.resultContainer}>
+        <p>Cambio minimo : {result? result : ''}</p>
+        <button onClick={handleCalculate}>Calcular</button>
+      </div>      
       {errors.length > 0 && (
-        <div style={{ color: 'red' }}>
+        <div className={style.errorsContainer}>
           {errors.map((error, index) => (
             <p key={index}>{error}</p>
           ))}
         </div>
-      )}
-      <div>
-        <p>Cambio minimo : {result}</p>
-      </div>
+      )}      
     </div>
   );
 };

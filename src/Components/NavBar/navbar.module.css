@@ -1,5 +1,5 @@
 .root{
-    background-color: rgba(110, 13, 13, 0.464);
+    background-color: #6e0d0d;
     width: 100vw;
     position: fixed;
     opacity: 0.95;
@@ -11,3 +11,21 @@
     padding: 0 25px;
     box-sizing: border-box
 }
+
+.jestLink {
+    background-color: #9b2c2c;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .jestLink:hover {
+    background-color: #b33a3a;
+  }

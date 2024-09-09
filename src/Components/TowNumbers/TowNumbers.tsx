@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import style from "./TowNumbers.module.css";
 import {twoNumberSum} from '../../Helpers/twoNumberSum';
 import { validateArrayNumbers, validateTarget, validateNumArray } from '../../Helpers/Validation/Validation';
 
@@ -19,6 +20,7 @@ export const TowNumbers: React.FC = () => {
     setErrors(newErrors);
     return newErrors.length === 0;
   };
+
   const handleCalculate = () => {
     if (!validateInputs()) return;
     const numArray = numbers.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
@@ -29,40 +31,43 @@ export const TowNumbers: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className={style.towNumbersContainer}>
+      <h3>Funcion Suma de dos números</h3>
+      <div className={style.inputNumbersContainer}>
         <label>
-          Números (separados por comas):
+          Ingrese el array de numeros (separados por comas):
           <input
+            className={style.inputNumbers}
             type="text"
             value={numbers}
-            onChange={(e) => setNumbers(e.target.value)}
+            onChange={(event) => setNumbers(event.target.value)}
             placeholder="Ej: 1, 2, 3, 4"
           />
         </label>
       </div>
-      <div>
+      <div className={style.targetNumbersContainer}>
         <label>
-          Objetivo:
+          Ingrese la suma objetivo:
           <input
+            className={style.inputNumbers}
             type="number"
             value={target}
-            onChange={(e) => setTarget(Number(e.target.value))}
+            onChange={(event) => setTarget(Number(event.target.value))}
             placeholder="Ej: 5"
           />
         </label>
+        <button onClick={handleCalculate}>Calcular</button>
       </div>
-      <button onClick={handleCalculate}>Calcular</button>
+      <div className={style.resultContainer}>
+        <p>Resultado: [ {result.length > 0 ? result.join(', ') : ''} ]</p>
+      </div>
       {errors.length > 0 && (
-        <div style={{ color: 'red' }}>
+        <div className={style.errorsContainer}>
           {errors.map((error, index) => (
             <p key={index}>{error}</p>
           ))}
         </div>
-      )}
-      <div>
-        <p>Resultado: [ {result.length > 0 ? result.join(', ') : ''} ]</p>
-      </div>
+      )}      
     </div>
   );
 };
