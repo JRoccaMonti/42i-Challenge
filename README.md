@@ -36,4 +36,4 @@ npm run test
 - [Non Constructible Change](https://42i.notion.site/Non-Constructible-Change-e423c9af05c64621a40bf9dcefee3930)
 
 # Preview
-![image](https://github.com/JRoccaMonti/42i-challenge/assets/)
+![image](https://github.com/JRoccaMonti/42i-challenge/blob/main/src/Assets/Img/Demo.png)
