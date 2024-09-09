@@ -1,10 +1,10 @@
 import { render, fireEvent, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import ConstructibleChange from "./ConstructibleChange";
-import NonConstructibleChange from '../../Helpers/NonConstructibleChange';
+import {ConstructibleChange} from "./ConstructibleChange";
+import {nonConstructibleChange} from '../../Helpers/nonConstructibleChange';
 import { validateArrayNumbers, validateNumArray } from '../../Helpers/Validation/Validation';
 
-jest.mock('../../Helpers/NonConstructibleChange');
+jest.mock('../../Helpers/nonConstructibleChange');
 jest.mock('../../Helpers/Validation/Validation');
 
 describe('ConstructibleChange Component', () => {
@@ -36,21 +36,21 @@ describe('ConstructibleChange Component', () => {
     fireEvent.change(screen.getByPlaceholderText('Ej: 1, 2, 3, 4'), { target: { value: 'abc, def' } });
     fireEvent.click(screen.getByText('Calcular'));
 
-    expect(NonConstructibleChange).not.toHaveBeenCalled();
+    expect(nonConstructibleChange).not.toHaveBeenCalled();
     expect(screen.queryByText('Cambio minimo :'));
   });
 
   it('Debería calcular y mostrar el cambio mínimo correctamente', () => {
     (validateArrayNumbers as jest.Mock).mockReturnValue([]);
     (validateNumArray as jest.Mock).mockReturnValue([]);
-    (NonConstructibleChange as jest.Mock).mockReturnValue(7);
+    (nonConstructibleChange as jest.Mock).mockReturnValue(7);
 
     render(<ConstructibleChange />);
 
     fireEvent.change(screen.getByPlaceholderText('Ej: 1, 2, 3, 4'), { target: { value: '1, 2, 5' } });
     fireEvent.click(screen.getByText('Calcular'));
 
-    expect(NonConstructibleChange).toHaveBeenCalledWith([1, 2, 5]);
+    expect(nonConstructibleChange).toHaveBeenCalledWith([1, 2, 5]);
     expect(screen.getByText('Cambio minimo : 7')).toBeInTheDocument();
   });
   it('Debería actualizar el estado de números al ingresar texto', () => {

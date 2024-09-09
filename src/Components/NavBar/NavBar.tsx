@@ -6,5 +6,4 @@ export const NavBar = () => {
         <a href="coverage\lcov-report\index.html">Jest Coverage</a>
       </div>
     );
-  };
-export default NavBar;
+};

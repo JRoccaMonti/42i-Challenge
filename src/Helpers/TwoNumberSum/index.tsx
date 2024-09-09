@@ -1,15 +1,14 @@
-const TwoNumberSum = (input: number[], target: number): number[] => {
-  const reserva: { [key: number]: number } = {}
+export const twoNumberSum = (input: number[], target: number): number[] => {
+  const seen : { [key: number]: number } = {}
   for (let i = 0; i < input.length; i++) {
     const complement = target - input[i];
-    if (Object.prototype.hasOwnProperty.call(reserva, complement)) {
+    if (Object.prototype.hasOwnProperty.call(seen , complement)) {
       return [complement,input[i]];
     }
-    reserva[input[i]]=i;
+    seen [input[i]]=i;
   }
   
   return [];
 };
 
 
-export default  TwoNumberSum;

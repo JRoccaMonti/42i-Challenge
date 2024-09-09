@@ -1,6 +1,6 @@
 import { render, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import NavBar from './NavBar';
+import {NavBar} from './NavBar';
 
 describe('NavBar Component', () => {
   it('debería coincidir con la snapshot', () => {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import TwoNumberSum from '../../Helpers/TwoNumberSum';
+import {twoNumberSum} from '../../Helpers/twoNumberSum';
 import { validateArrayNumbers, validateTarget, validateNumArray } from '../../Helpers/Validation/Validation';
 
-const TowNumbers: React.FC = () => {
+export const TowNumbers: React.FC = () => {
   const [numbers, setNumbers] = useState<string>('');
   const [target, setTarget] = useState<number | ''>('');
   const [result, setResult] = useState<number[]>([]);
@@ -23,7 +23,7 @@ const TowNumbers: React.FC = () => {
     if (!validateInputs()) return;
     const numArray = numbers.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
     if (target !== '' && numArray.length > 0) {
-      const sumResult = TwoNumberSum(numArray, target);
+      const sumResult = twoNumberSum(numArray, target);
       setResult(sumResult);
     }
   };
@@ -66,5 +66,3 @@ const TowNumbers: React.FC = () => {
     </div>
   );
 };
-
-export default TowNumbers;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import NonConstructibleChange from '../../Helpers/NonConstructibleChange';
+import {nonConstructibleChange} from '../../Helpers/nonConstructibleChange';
 import { validateArrayNumbers, validateNumArray } from '../../Helpers/Validation/Validation';
 
 export const ConstructibleChange: React.FC  = () => {
@@ -20,7 +20,7 @@ export const ConstructibleChange: React.FC  = () => {
   const handleCalculate = () => {
     if (!validateInputs()) return;
     const numArray = numbers.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
-    const sumResult = NonConstructibleChange(numArray);
+    const sumResult = nonConstructibleChange(numArray);
     setResult(sumResult);
   };
 
@@ -51,5 +51,3 @@ export const ConstructibleChange: React.FC  = () => {
     </div>
   );
 };
-
-export default ConstructibleChange;

@@ -1,3 +1,5 @@
-export { default as NavBar } from './NavBar/NavBar';
-export { default as TowNumbers } from './TowNumbers/TowNumbers';
-export { default as ConstructibleChange } from './ConstructibleChange/ConstructibleChange';
+import { NavBar } from './NavBar/NavBar';
+import { TowNumbers } from './TowNumbers/TowNumbers';
+import { ConstructibleChange } from './ConstructibleChange/ConstructibleChange';
+
+export {NavBar,TowNumbers,ConstructibleChange}

@@ -1,4 +1,4 @@
-const NonConstructibleChange = (input: number[]): number=> {
+export const nonConstructibleChange = (input: number[]): number=> {
     const inputShort = input.sort((a, b) => a - b);
     let change = 0;
   
@@ -9,5 +9,3 @@ const NonConstructibleChange = (input: number[]): number=> {
   
     return change + 1;
 };
- 
-export default  NonConstructibleChange;

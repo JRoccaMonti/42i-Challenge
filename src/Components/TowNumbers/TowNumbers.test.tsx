@@ -1,10 +1,10 @@
 import { render, fireEvent, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import TowNumbers from "./TowNumbers";
-import TwoNumberSum from "../../Helpers/TwoNumberSum";
+import {TowNumbers} from "./TowNumbers";
+import {twoNumberSum} from "../../Helpers/twoNumberSum";
 import { validateArrayNumbers, validateNumArray, validateTarget } from '../../Helpers/Validation/Validation';
 
-jest.mock('../../Helpers/TwoNumberSum');
+jest.mock('../../Helpers/twoNumberSum');
 jest.mock('../../Helpers/Validation/Validation');
 
 describe('TowNumbers Component', () => {
@@ -38,7 +38,7 @@ describe('TowNumbers Component', () => {
     fireEvent.change(screen.getByPlaceholderText('Ej: 5'), { target: { value: 'a' } });
     fireEvent.click(screen.getByText('Calcular'));
 
-    expect(TwoNumberSum).not.toHaveBeenCalled();
+    expect(twoNumberSum).not.toHaveBeenCalled();
     expect(screen.getByText(/Resultado:\s*\[\s*\]/)).toBeInTheDocument();
   });
 
@@ -46,7 +46,7 @@ describe('TowNumbers Component', () => {
     (validateArrayNumbers as jest.Mock).mockReturnValue([]);
     (validateTarget as jest.Mock).mockReturnValue([]);
     (validateNumArray as jest.Mock).mockReturnValue([]);
-    (TwoNumberSum as jest.Mock).mockReturnValue([2, 3]);
+    (twoNumberSum as jest.Mock).mockReturnValue([2, 3]);
   
     render(<TowNumbers />);
   
@@ -54,7 +54,7 @@ describe('TowNumbers Component', () => {
     fireEvent.change(screen.getByPlaceholderText('Ej: 5'), { target: { value: '5' } });
     fireEvent.click(screen.getByText('Calcular'));
   
-    expect(TwoNumberSum).toHaveBeenCalledWith([1, 2, 3, 4], 5);
+    expect(twoNumberSum).toHaveBeenCalledWith([1, 2, 3, 4], 5);
     expect(screen.getByText(/Resultado:\s*\[\s*2, 3\s*\]/)).toBeInTheDocument();
   });
 
