@@ -2,31 +2,44 @@
 
 exports[`TowNumbers Component Debería coincidir con la snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    <div>
+  <div
+    class="towNumbersContainer"
+  >
+    <h3>
+      Funcion Suma de dos números
+    </h3>
+    <div
+      class="inputNumbersContainer"
+    >
       <label>
-        Números (separados por comas):
+        Ingrese el array de numeros (separados por comas):
         <input
+          class="inputNumbers"
           placeholder="Ej: 1, 2, 3, 4"
           type="text"
           value=""
         />
       </label>
     </div>
-    <div>
+    <div
+      class="targetNumbersContainer"
+    >
       <label>
-        Objetivo:
+        Ingrese la suma objetivo:
         <input
+          class="inputNumbers"
           placeholder="Ej: 5"
           type="number"
           value=""
         />
       </label>
+      <button>
+        Calcular
+      </button>
     </div>
-    <button>
-      Calcular
-    </button>
-    <div>
+    <div
+      class="resultContainer"
+    >
       <p>
         Resultado: [  ]
       </p>

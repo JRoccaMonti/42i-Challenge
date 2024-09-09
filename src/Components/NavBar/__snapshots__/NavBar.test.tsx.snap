@@ -9,6 +9,7 @@ exports[`NavBar Component debería coincidir con la snapshot 1`] = `
       42i Chalenge
     </h3>
     <a
+      class="jestLink"
       href="coverage\\lcov-report\\index.html"
     >
       Jest Coverage
